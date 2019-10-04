@@ -1,4 +1,4 @@
-var cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary');
 
 exports.uploads = function(file){
     return new Promise (resolve =>{

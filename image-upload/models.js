@@ -1,11 +1,11 @@
-var mongoose = require('mongoose')
+const mongoose = require('mongoose')
 
-var imageUpload = mongoose.Schema({
+const imageUpload = mongoose.Schema({
     imageName: {
         type: String,
         required: true
     },
-    
+
     cloudImage: {
         type: String,
         required: true

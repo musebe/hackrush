@@ -1,8 +1,8 @@
-var express = require('express');
-var imageController = require('./imageController');
-var upload = require('./cloudinaryUploads/multer');
+const express = require('express');
+const imageController = require('./imageController');
+const upload = require('./cloudinaryUploads/multer');
 
-var router = express.Router();
+const router = express.Router();
 
 router.post('/addImage', upload.any(), imageController.createApp);
 

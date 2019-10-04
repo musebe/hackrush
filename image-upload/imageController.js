@@ -1,5 +1,5 @@
-var imageModel = require('./models');
-var cloud = require('./cloudinaryConfig')
+const imageModel = require('./models');
+const cloud = require('./cloudinaryConfig')
 
 
 exports.createApp = (req, res) => {
@@ -34,10 +34,10 @@ exports.createApp = (req, res) => {
                         cloudImage: result.url,
                         imageId: result.id
                     }
-                    
+
                         console.log('i reached here too')
                         console.log(imageDetails.cloudImage)
-                        
+
                         imageModel.create(imageDetails, (err, created)=> {
                         if(err){
                             res.json({
@@ -51,10 +51,10 @@ exports.createApp = (req, res) => {
                             })
                         }
                     })
-                    
-                    
+
+
                 })
-        
+
             }
         });
     }catch(execptions){
